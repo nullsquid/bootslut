@@ -7,6 +7,25 @@ public class Stomp : MonoBehaviour {
     public float endPos;
     public float newYPos;
     public float stompSpeed = 1.0f;
+    public ExpectationController expectations;
+    void Start()
+    {
+        
+    }
+
+    void OnEnable()
+    {
+        EventManager.StartListening("onThroat", SteppedOnThroat);
+        EventManager.StartListening("onChest", SteppedOnChest);
+        EventManager.StartListening("onCrotch", SteppedOnCrotch);
+    }
+
+    void OnDisable()
+    {
+        EventManager.StopListening("onThroat", SteppedOnThroat);
+        EventManager.StopListening("onChest", SteppedOnChest);
+        EventManager.StopListening("onCrotch", SteppedOnCrotch);
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -42,7 +61,27 @@ public class Stomp : MonoBehaviour {
     {
         if (other.name == "Throat")
         {
-            Debug.Log("Stepped On Throat");
+            SteppedOnThroat();
+            //Debug.Log("Stepped On Throat");
+            //needs to find target and trigger event then so that the expectation can be added
+            //EventManager.TriggerEvent("onThroat");
+
+            
         }
+    }
+
+    void SteppedOnThroat()
+    {
+        GameObject.Find("Slut").GetComponent<ExpectationController>().partsSteppedOn.Add("Throat");
+    }
+
+    void SteppedOnCrotch()
+    {
+
+    }
+
+    void SteppedOnChest()
+    {
+
     }
 }
