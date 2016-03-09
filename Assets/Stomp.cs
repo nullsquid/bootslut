@@ -62,26 +62,36 @@ public class Stomp : MonoBehaviour {
         if (other.name == "Throat")
         {
             SteppedOnThroat();
-            //Debug.Log("Stepped On Throat");
-            //needs to find target and trigger event then so that the expectation can be added
-            //EventManager.TriggerEvent("onThroat");
-
-            
+           
+        }
+        else if (other.name == "Chest")
+        {
+            SteppedOnChest();
+        }
+        else if (other.name == "Crotch")
+        {
+            SteppedOnCrotch();
         }
     }
 
     void SteppedOnThroat()
     {
         GameObject.Find("Slut").GetComponent<ExpectationController>().partsSteppedOn.Add("Throat");
+        EventManager.TriggerEvent("expectation");
+
     }
 
     void SteppedOnCrotch()
     {
+        GameObject.Find("Slut").GetComponent<ExpectationController>().partsSteppedOn.Add("Crotch");
+        EventManager.TriggerEvent("expectation");
 
     }
 
     void SteppedOnChest()
     {
+        GameObject.Find("Slut").GetComponent<ExpectationController>().partsSteppedOn.Add("Chest");
+        EventManager.TriggerEvent("expectation");
 
     }
 }
