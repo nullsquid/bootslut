@@ -3,9 +3,7 @@ using System.Collections;
 
 public interface ISlutState  {
 
-    void Update();
-
-    void OnTriggerEnter2D(Collider2D other);
+    void UpdateState();
 
     void ToGreenState();
 

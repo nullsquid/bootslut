@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public class ExpectationController : MonoBehaviour {
     public List<string> partsSteppedOn = new List<string>();
-	
-	void OnEnable()
+    [HideInInspector]public string expectation;
+
+    void OnEnable()
     {
         EventManager.StartListening("expectation", Expectation);
     }
@@ -26,7 +27,6 @@ public class ExpectationController : MonoBehaviour {
         int numChest = 0;
         int numCrotch = 0;
         int numThroat = 0;
-        string expectation;
         //string expectation = partsSteppedOn[Random.Range(0, partsSteppedOn.Count)];
         for(int i = 0; i < partsSteppedOn.Count; i++)
         {
