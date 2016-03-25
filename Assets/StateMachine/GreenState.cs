@@ -30,6 +30,7 @@ public class GreenState : ISlutState {
 
     private void WaitForInput()
     {
+        Rest();
         slut.slutStats.pain -= Time.deltaTime * slut.slutStats.painDecay;
         if(slut.slutStats.pain > slut.painThresholdYellow)
         {
@@ -50,7 +51,8 @@ public class GreenState : ISlutState {
         Debug.Log("Orgasm");
 
     }
-    IEnumerator Rest()
+    
+    /*IEnumerator Rest()
     {
         while (true)
         {
@@ -60,6 +62,19 @@ public class GreenState : ISlutState {
             {
                 slut.slutStats.exhaustion = 0;
             }
+        }
+    }*/
+
+    void Rest()
+    {
+        //slut.painCurCooldown += Time.deltaTime;
+        if (slut.slutStats.exhaustion > 0)
+        {
+            slut.slutStats.exhaustion -= Time.deltaTime ;
+        }
+        if(slut.slutStats.exhaustion <= 0)
+        {
+            slut.slutStats.exhaustion = 0;
         }
     }
 }
