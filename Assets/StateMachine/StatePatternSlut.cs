@@ -39,8 +39,5 @@ public class StatePatternSlut : MonoBehaviour {
         
 	}
 
-    /*void StartPainCooldown()
-    {
-        StartCoroutine(yellowState.PainCooldown());
-    }*/
+    
 }

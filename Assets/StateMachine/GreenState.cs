@@ -56,6 +56,10 @@ public class GreenState : ISlutState {
         {
             yield return new WaitForSeconds(1.0f);
             slut.slutStats.exhaustion -= 1;
+            if(slut.slutStats.exhaustion <= 0)
+            {
+                slut.slutStats.exhaustion = 0;
+            }
         }
     }
 }
