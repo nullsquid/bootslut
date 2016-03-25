@@ -1762,8 +1762,8 @@ MonoBehaviour:
   - {fileID: 316625930}
   - {fileID: 1908276555}
   - {fileID: 1431270217}
-  - {fileID: 1671044614}
   - {fileID: 801063808}
+  - {fileID: 1671044614}
   - {fileID: 1391676853}
   - {fileID: 1362157106}
   - {fileID: 1148655275}
@@ -5296,7 +5296,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1982320286}
-  - 95: {fileID: 1982320287}
+  - 111: {fileID: 1982320287}
   m_Layer: 0
   m_Name: spline_Ctrl_GRP_1
   m_TagString: Untagged
@@ -5317,23 +5317,20 @@ Transform:
   - {fileID: 1177664512}
   m_Father: {fileID: 2056016487}
   m_RootOrder: 0
---- !u!95 &1982320287
-Animator:
-  serializedVersion: 3
+--- !u!111 &1982320287
+Animation:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982320285}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 935a916ddc390ee49b861f56887cefaa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 78a0a9c03947aa04aada4271778d9d64, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1983589926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,7 +5654,7 @@ Animator:
   m_GameObject: {fileID: 2056016486}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 523b6d36899cd6c489e77858c10c44a8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3d49c6106474c284d984a3cc2f7b7a24, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
