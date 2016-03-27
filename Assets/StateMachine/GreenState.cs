@@ -52,18 +52,7 @@ public class GreenState : ISlutState {
 
     }
     
-    /*IEnumerator Rest()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1.0f);
-            slut.slutStats.exhaustion -= 1;
-            if(slut.slutStats.exhaustion <= 0)
-            {
-                slut.slutStats.exhaustion = 0;
-            }
-        }
-    }*/
+    
 
     void Rest()
     {
@@ -76,5 +65,9 @@ public class GreenState : ISlutState {
         {
             slut.slutStats.exhaustion = 0;
         }
+
+    }
+    void AddExhaustion() {
+        slut.slutStats.exhaustion += 1;
     }
 }
