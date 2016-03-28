@@ -34,6 +34,7 @@ public class YellowState : ISlutState {
     public void WaitForInput()
     {
         StartCooldown();
+        EventManager.TriggerEvent("yellow");
         //StartCoroutine(PainCooldown());
         if(slut.slutStats.pain > slut.painThresholdRed)
         {

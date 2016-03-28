@@ -16,15 +16,21 @@ public class MoodDisplay : MonoBehaviour {
 	}
 	void OnEnable() {
         EventManager.StartListening("greenIdle", IsGreenIdle);
+        EventManager.StartListening("greenHappy", IsGreenHappy);
+        EventManager.StartListening("cumming", IsCumming);
+        EventManager.StartListening("yellow", IsYellow);
+        EventManager.StartListening("red", IsRed);
     }
 
     void OnDisable() {
         EventManager.StopListening("greenIdle", IsGreenIdle);
+        EventManager.StopListening("greenHappy", IsGreenHappy);
+        EventManager.StopListening("cumming", IsCumming);
+        EventManager.StopListening("yellow", IsYellow);
+        EventManager.StopListening("red", IsRed);
     }
 	// Update is called once per frame
-	void Update () {
-	    
-	}
+	
     void IsGreenIdle() {
         sprite.sprite = faces[0];
         //frameCount = 0;

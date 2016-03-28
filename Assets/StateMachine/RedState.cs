@@ -11,7 +11,7 @@ public class RedState : ISlutState {
     }
     public void UpdateState()
     {
-
+        EventManager.TriggerEvent("red");
     }
 
     public void ToGreenState()
