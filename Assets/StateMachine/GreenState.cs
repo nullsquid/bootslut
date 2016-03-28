@@ -31,6 +31,7 @@ public class GreenState : ISlutState {
     private void WaitForInput()
     {
         Rest();
+        EventManager.TriggerEvent("greenIdle");
         slut.slutStats.pain -= Time.deltaTime * slut.slutStats.painDecay;
         if(slut.slutStats.pain > slut.painThresholdYellow)
         {
