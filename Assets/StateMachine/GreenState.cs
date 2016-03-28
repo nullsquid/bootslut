@@ -42,7 +42,7 @@ public class GreenState : ISlutState {
         {
             ToRedState();
         }
-        if (slut.slutStats.arousal > slut.slutStats.arousalThreshold) {
+        if (slut.slutStats.arousal > slut.slutStats.arousalThreshold && slut.slutStats.pain < slut.painThresholdYellow) {
             Orgasm();
         }
     }
@@ -50,6 +50,7 @@ public class GreenState : ISlutState {
     void Orgasm()
     {
         Debug.Log("Orgasm");
+        EventManager.TriggerEvent("cumming");
 
     }
     

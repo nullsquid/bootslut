@@ -53,14 +53,33 @@ public class MoodDisplay : MonoBehaviour {
 
     }
     void IsCumming() {
-
+        sprite.sprite = faces[6];
+        sprite.transform.localScale = new Vector3(Mathf.PingPong(Time.time, 1), Mathf.PingPong(Time.time, 1), transform.localScale.z);
     }
 
     void IsYellow() {
+        sprite.sprite = faces[3];
+        //frameCount = 0;
+        if (timeBetweenFrames > 0)
+        {
+            timeBetweenFrames -= Time.deltaTime;
+        }
+        else {
+            frameCount += 1;
+            timeBetweenFrames = startTime;
 
+        }
+        if (frameCount % 2 == 0)
+        {
+            sprite.sprite = faces[3];
+        }
+        else {
+            sprite.sprite = faces[4];
+        }
     }
 
     void IsRed() {
-
+        sprite.sprite = faces[5];
     }
+    
 }

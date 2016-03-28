@@ -55,6 +55,7 @@ public class YellowState : ISlutState {
         }
         if(slut.painCurCooldown > slut.painCooldownTime)
         {
+
             ToGreenState();
         }
     }
